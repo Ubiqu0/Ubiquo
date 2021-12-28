@@ -2,7 +2,7 @@ import asyncio
 import time,logging,json
 from ubirtc.webrtc import WebRTC,GSTWebRTCApp
 
-WS_SERVER = 'ws://178.62.245.68:8000/ws/control/'
+WS_SERVER = 'wss://ubiquo.net/ws/control/'
 DEVICE_ID = '' #insert your device ID
 
 

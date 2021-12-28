@@ -3,8 +3,8 @@ import time,logging,json
 from ubirtc.webrtc import WebRTC,GSTWebRTCApp
 import serial
 
-WS_SERVER = 'ws://178.62.245.68:8000/ws/control/'
-DEVICE_ID = '' #insert your device ID
+WS_SERVER = 'wss://ubiquo.net/ws/control/'
+DEVICEx_ID = '' #insert your device ID
 
 
 # define what to do with the received messages

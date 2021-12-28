@@ -58,7 +58,7 @@ class GSTWebRTCApp:
         if not pipeline_str:
             self.pipeline_str  = ''' webrtcbin name=sendrecv bundle-policy=max-bundle
             rpicamsrc name=rpicamsrc bitrate=1000000 preview=false !
-            video/x-h265,profile=constrained-baseline,width=640,height=360,level=3.0,framerate=30/1 !
+            video/x-h264,profile=constrained-baseline,width=640,height=360,level=3.0,framerate=30/1 !
             queue max-size-time=100000000 ! h264parse !
             rtph264pay mtu=1024 config-interval=-1 name=payloader !
             application/x-rtp,media=video,encoding-name=H264,payload=97 ! sendrecv.'''
