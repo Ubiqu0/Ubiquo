@@ -22,13 +22,11 @@ setup(
   name="ubirtc",
   version="0.0.1",
   packages=['ubirtc'],
+  author='Miguel Won',
   install_requires=[
-    "pycairo",
-    "PyGObject"
     "websockets",
     "asyncio",
     ],
-  author="Miguel Won",
   description="Ubiquo: Live streaming and remote control",
   keywords=["Ubiquo","UbiOne","IoT","WebRTC","Raspberry Pi","GStreamer"],
   url="",
