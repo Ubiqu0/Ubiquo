@@ -42,13 +42,6 @@ class GSTWebRTCApp:
     def __init__(self,pipeline_str = None,audio = False,audio_str = None):
         """Initialize gstreamer webrtc app.
 
-        Initializes GObjects and checks for required plugins.
-
-        Arguments:
-            stun_server {[string]} -- Optional STUN server uri in the form of:
-                                    stun:<host>:<port>
-            turn_servers {[list of strings]} -- Optional TURN server uris in the form of:
-                                    turn://<user>:<password>@<host>:<port>
         """
 
         self.pipeline = None
