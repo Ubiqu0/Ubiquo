@@ -15,7 +15,7 @@
 colocar aqui gif 
 
 <p align="center">
-  <img src="https://media.giphy.com/media/NeCN5N0h75dTIt5Crz/giphy-downsized-large.gif" alt=""/>
+  <img src="https://github.com/Ubiqu0/ubiquo_public/blob/main/public/UBIQUO_Control.gif" alt=""/>
 </p>
 
 
