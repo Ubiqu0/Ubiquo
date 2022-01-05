@@ -3,9 +3,10 @@
 
 * [Introduction](https://github.com/Ubiqu0/Ubiquo/#introduction)<br>
 * [Installation](https://github.com/Ubiqu0/Ubiquo/#installation)<br>
-  * [RPI OS](https://github.com/Ubiqu0/UbiOne/#rpi-os)<br>
-  * [GStreamer](https://github.com/Ubiqu0/UbiOne/#gstreamer)<br>
+  * [RPI OS](https://github.com/Ubiqu0/Ubiquo/#rpi-os)<br>
+  * [GStreamer](https://github.com/Ubiqu0/Ubiquo/#gstreamer)<br>
 * [Examples](https://github.com/Ubiqu0/Ubiquo/#examples)<br>
+* [UbiOne](https://github.com/Ubiqu0/Ubiquo/#ubione)<br>
 
 
 # Introduction
@@ -96,7 +97,6 @@ I have configured Ubiquo control room to listen the following keyboard keys:
 Additionally, if connected, the control room reads a **PS4 controller** input.
 
 
-
 ## Hello World
 
 You have a Hello World example in the [examples](https://github.com/Ubiqu0/Ubiquo/tree/main/examples) folder. Just open it and insert your device ID:
@@ -121,4 +121,15 @@ You can send information back to the control room.  shows an example on how to d
 
 
 You can send information back to the control room. [send_telemetry.py](https://github.com/Ubiqu0/Ubiquo/blob/main/examples/hello_world_telemetry.py) shows an example of how to do it. It sends a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. The keys must be named ```t1,...,t8```, and the values are given by a list in the format ```['Variable name',value]``` or ```['Variable name',value, min, max]```.
+
+
+## UbiOne
+
+For more complete examples, please check this [repository](https://github.com/Ubiqu0/UbiOne). **UbiOne** is an RPI HAT designed to give remote-ability to an RPI. It joins an STM32F4 MCU, a PCIe connector for 4G (and 5G!) connectivity, and a set of peripherals.
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/7373193/148281317-fad624ce-be21-4af7-b50f-dae3445dfba5.png" height=475 alt=""/>
+</p>
+
 
