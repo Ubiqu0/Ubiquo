@@ -37,16 +37,15 @@ A camera is also expected to be connected to the CSI connector, and the RPI OS c
 ## GStreamer
 
 
-**Ubiquo** is built on top of [GStreamer](https://gitlab.freedesktop.org/gstreamer) and [WebRTC](https://webrtc.org/), using GStreamer plugin [webrtcbin](https://gstreamer.freedesktop.org/documentation/webrtc/index.html). For this reason, the first step is to install GStreamer and needed plugins. 
+**Ubiquo** is built on top of [GStreamer](https://gitlab.freedesktop.org/gstreamer) and [WebRTC](https://webrtc.org/), using GStreamer plugin [webrtcbin](https://gstreamer.freedesktop.org/documentation/webrtc/index.html). Start by cloning the repository:
 
-Git clone the repository and run the script ``install_gstreamer.sh``:
 
 ```
 git clone https://github.com/Ubiqu0/Ubiquo.git
 cd Ubiquo
 ```
 
-First create and activate a virtual environment:
+Create and activate a virtual environment:
 
 ```
 sudo apt-get install virtualenv
@@ -61,7 +60,7 @@ chmod +x install_gstreamer.sh
 ./install_gstreamer.sh
 ```
 
-The script will downloand and install GStreamer and several plugins, so it will take some time. When finished you can test if GStreamer is installed (note that the first GStreamer is exectued a bunch of errors will show up):
+The script will downloand and install GStreamer and several plugins. It will take some time. When finished you can test if GStreamer is installed (note that the first time GStreamer is exectued a bunch of errors will show up):
 
 ```
 gst-inspect-1.0 --version
@@ -76,7 +75,7 @@ pip install .
 ```
 
 
-# Example 
+# Examples
 
 ## Ubiquo
 
@@ -88,7 +87,14 @@ Configuration form:
   * **Resolution**: video resolution.
   * **FPS**: frames per second.
   * **Bitrate**: maximum bitrate at bps.
-  * **Send mode**: which mode data commands are sent to the RPI. Continuously, i.e., data sent non-stop every "minimum delay" interval or send only when a key is pressed.
+  * **Send mode**: how data commands are sent to the RPI. Continuously, i.e., commands sent non-stop every "minimum delay" interval, or send and stop when a key is released.
+
+I have configured Ubiquo control room to listen the following keyboard keys: 
+
+**q,w,e,r,t,a,s,d,f,g,ArrowRight,ArrowLeft,ArrowDown,ArrowUp**. 
+
+Additionally, if connected, the control room reads a **PS4 controller** input.
+
 
 
 ## Hello World
@@ -106,9 +112,13 @@ You are now ready to go:
 python hello_world.py
 ```
 
-then go to your device control room and click **Connect**.
+then go to your device control room and click **Connect**. After the connection is established, press the w key and check its reception at the RPI terminal.
 
 
+## Send telemetry
+
+You can send information back to the control room.  shows an example on how to do it. The example send a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. 
 
 
+You can send information back to the control room. [send_telemetry.py](https://github.com/Ubiqu0/Ubiquo/blob/main/examples/hello_world_telemetry.py) shows an example of how to do it. It sends a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. The keys must be named ```t1,...,t8```, and the values are given by a list in the format ```['Variable name',value]``` or ```['Variable name',value, min, max]```.
 
