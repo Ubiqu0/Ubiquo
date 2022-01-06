@@ -22,7 +22,7 @@
 
 ## RPI OS
 
-I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. So, the first step is to install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) and update it:
+I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) and update it:
 
 ```
 sudo apt-get update && sudo apt-get upgrade
@@ -31,7 +31,8 @@ sudo apt-get update && sudo apt-get upgrade
 A camera is also expected to be connected to the CSI connector, and the RPI OS configured accordingly: 
 
 1. Go to the RPI system configuration menu by typing ```sudo raspi-config``` in a terminal.
-2. Select "**Yes**" to enable the camera.
+2. Select "**Interface Options**" > "**Camera**".
+3. Select "**Yes**" to enable the camera.
 
 ## GStreamer
 
@@ -110,13 +111,10 @@ You are now ready to go:
 python hello_world.py
 ```
 
-then go to your device control room and click **Connect**. After the connection is established, press the w key and check its reception at the RPI terminal.
+then go to your device control room and click **Connect**. After the connection is established, press the **w** key and check its reception at the RPI terminal.
 
 
 ## Send telemetry
-
-You can send information back to the control room.  shows an example on how to do it. The example send a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. 
-
 
 You can send information back to the control room. [send_telemetry.py](https://github.com/Ubiqu0/Ubiquo/blob/main/examples/hello_world_telemetry.py) shows an example of how to do it. It sends a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. The keys must be named ```t1,...,t8```, and the values are given by a list in the format ```['Variable name',value]``` or ```['Variable name',value, min, max]```.
 
