@@ -30,20 +30,20 @@ class GstApp(GSTWebRTCApp):
         ###########################
         ###########################
 
-
+SEND_TIME_INTERVAL = 1
 async def send_data_message(wrtc_conn):
     count = 0
     while True:
-        await asyncio.sleep(1)
+        await asyncio.sleep(SEND_TIME_INTERVAL) 
         if wrtc_conn.is_data_channel_ready():
             ###########################
             ######## add your code here
             #########################
             # send dictionary with t1,t2,...,t8 as keys and the respective value with the format ['name',value]
-            # If you want a progressive you can send the min and max with ['name',value,min,max]
+            # If you want a progressive bar you can send the min and max with ['name',value,min,max]
             data = {
-                't1':['Var1',count],
-                't2':['Var2',count*2,0,100],
+                't1':['Counter1',count],
+                't2':['Counter2',count*2,0,100],
                 }
             count+=1
             ###########################
