@@ -118,7 +118,7 @@ then go to your device control room and click **Connect**. After the connection 
 
 ## Send telemetry
 
-You can send information back to the control room. [send_telemetry.py](https://github.com/Ubiqu0/Ubiquo/blob/main/examples/hello_world_telemetry.py) shows an example of how to do it. It sends a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. The keys must be named ```t1,...,t8```, and the values are given by a list in the format ```['Variable name',value]``` or ```['Variable name',value, min, max]```.
+You can send information back to the control room. [send_telemetry.py](https://github.com/Ubiqu0/Ubiquo/blob/main/examples/send_telemetry.py) shows an example of how to do it. It sends a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. The keys must be named ```t1,...,t8```, and the values are given by a list in the format ```['Variable name',value]``` or ```['Variable name',value, min, max]```.
 
 
 ## UbiOne
