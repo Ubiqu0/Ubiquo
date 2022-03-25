@@ -24,7 +24,7 @@
 
 ## RPI OS
 
-I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (**NOTE**:don't install Bullseye but the latest stable legacy version of Raspberry Pi OS Buster) and update it:
+I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (**IMPORTANTE**:don't install Bullseye but the latest stable legacy version of Raspberry Pi OS Buster) and update it:
 
 ```
 sudo apt-get update && sudo apt-get upgrade
