@@ -14,7 +14,7 @@
 **[Ubiquo](https://ubiquo.net)** is a web application that allows you to live stream and interact with your Raspberry Pi remotely. With **Ubiquo**, one can easily control and interact bots and IoT devices built around a RPI.  Examples are drones or rovers controlled remotely using a simple web browser.
 
 =======
-**Important: pease note that it is not a professional service but a proof-of-concept demo. It does not offer any warranties, particularly in security.**
+**Important**: pease note that it is not a professional service but a proof-of-concept demo. It does not offer any warranties, particularly in security.
 
 >>>>>>> Stashed changes
 
