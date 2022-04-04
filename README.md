@@ -26,11 +26,10 @@
 
 I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (**IMPORTANTE**:don't install Bullseye but the latest stable legacy version of Raspberry Pi OS Buster) and update it:
 
-```
-sudo apt-get update && sudo apt-get upgrade
-```
+1. Install RPI with [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+2. Update and upgrade: ``` sudo apt-get update && sudo apt-get upgrade ```
 
-A camera is also expected to be connected to the CSI connector, and the RPI OS configured accordingly:
+A camera is expected to be connected to the CSI connector, and the RPI OS configured accordingly:
 
 1. Go to the RPI system configuration menu by typing ```sudo raspi-config``` in a terminal.
 2. Select "**Interface Options**" > "**Camera**".
