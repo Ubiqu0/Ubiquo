@@ -126,5 +126,5 @@ For more complete examples, please check this [repository](https://github.com/Ub
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/7373193/148281317-fad624ce-be21-4af7-b50f-dae3445dfba5.png" height=475 alt=""/>
+  <img src="https://user-images.githubusercontent.com/7373193/162843237-7880fc72-d043-4702-b59a-209a2aeedf32.png" height=475 alt=""/>
 </p>
