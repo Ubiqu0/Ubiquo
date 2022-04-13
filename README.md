@@ -24,13 +24,12 @@
 
 ## RPI OS
 
-I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (**NOTE**:don't install Bullseye but the latest stable legacy version of Raspberry Pi OS Buster) and update it:
+I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (**IMPORTANTE**:don't install Bullseye but the latest stable legacy version of Raspberry Pi OS Buster) and update it:
 
-```
-sudo apt-get update && sudo apt-get upgrade
-```
+1. Install RPI with [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+2. Update and upgrade: ``` sudo apt-get update && sudo apt-get upgrade ```
 
-A camera is also expected to be connected to the CSI connector, and the RPI OS configured accordingly:
+A camera is expected to be connected to the CSI connector, and the RPI OS configured accordingly:
 
 1. Go to the RPI system configuration menu by typing ```sudo raspi-config``` in a terminal.
 2. Select "**Interface Options**" > "**Camera**".
@@ -118,7 +117,7 @@ then go to your device control room and click **Connect**. After the connection 
 
 ## Send telemetry
 
-You can send information back to the control room. [send_telemetry.py](https://github.com/Ubiqu0/Ubiquo/blob/main/examples/hello_world_telemetry.py) shows an example of how to do it. It sends a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. The keys must be named ```t1,...,t8```, and the values are given by a list in the format ```['Variable name',value]``` or ```['Variable name',value, min, max]```.
+You can send information back to the control room. [send_telemetry.py](https://github.com/Ubiqu0/Ubiquo/blob/main/examples/send_telemetry.py) shows an example of how to do it. It sends a python dictionary every second. The control room is expected to receive a dictionary with a maximum size of eight keys. The keys must be named ```t1,...,t8```, and the values are given by a list in the format ```['Variable name',value]``` or ```['Variable name',value, min, max]```.
 
 
 ## UbiOne
@@ -127,5 +126,5 @@ For more complete examples, please check this [repository](https://github.com/Ub
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/7373193/148281317-fad624ce-be21-4af7-b50f-dae3445dfba5.png" height=475 alt=""/>
+  <img src="https://user-images.githubusercontent.com/7373193/162843237-7880fc72-d043-4702-b59a-209a2aeedf32.png" height=475 alt=""/>
 </p>
