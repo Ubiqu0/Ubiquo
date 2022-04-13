@@ -8,7 +8,7 @@ while true; do
                 echo "Connection up, reconnect not required..."
         else
                 echo "Connection down, reconnecting..."
-                sudo .//home/pi/Documents/SIM8200-M2_5G_HAT_code/Goonline/simcom-cm
+                sudo /home/pi/Ubiquo/qmi/SIM8200-M2_5G_HAT_code/Goonline/simcom-cm
         fi
 
         sleep 1
