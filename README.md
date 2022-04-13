@@ -24,7 +24,7 @@
 
 ## RPI OS
 
-I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (**IMPORTANTE**:don't install Bullseye but the latest stable legacy version of Raspberry Pi OS Buster) and update it:
+I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (**IMPORTANT**:don't install Bullseye but the latest stable legacy version of Raspberry Pi OS Buster) and update it:
 
 1. Install RPI with [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 2. Update and upgrade: ``` sudo apt-get update && sudo apt-get upgrade ```
@@ -54,7 +54,7 @@ virtualenv -p python3 env
 source env/bin/activate
 ```
 
-Then tun the instalattion script:
+Run the instalattion script:
 
 ```
 chmod +x install_gstreamer.sh
@@ -112,7 +112,7 @@ You are now ready to go:
 python hello_world.py
 ```
 
-then go to your device control room and click **Connect**. After the connection is established, press the **w** key and check its reception at the RPI terminal.
+then go to your device control room and click **Connect**. After the connection is established and the a datachanel opened, press the **w** key and check its reception at the RPI terminal.
 
 
 ## Send telemetry
