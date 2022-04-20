@@ -46,11 +46,11 @@ git clone https://github.com/Ubiqu0/Ubiquo.git
 cd Ubiquo
 ```
 
-Create and activate a virtual environment:
+Create and activate a virtual environment (with python3.7):
 
 ```
 sudo apt-get install virtualenv
-virtualenv -p python3 env
+virtualenv -p python3.7 env
 source env/bin/activate
 ```
 
