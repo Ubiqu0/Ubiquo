@@ -34,7 +34,7 @@ SEND_TIME_INTERVAL = 1
 async def send_data_message(wrtc_conn):
     count = 0
     while True:
-        await asyncio.sleep(SEND_TIME_INTERVAL) 
+        await asyncio.sleep(SEND_TIME_INTERVAL)
         if wrtc_conn.is_data_channel_ready():
             ###########################
             ######## add your code here
