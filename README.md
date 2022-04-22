@@ -81,10 +81,12 @@ pip install .
 ## Ubiquo
 
 The first step is to open an account at [ubiquo.net](http://ubiquo.net/). Log in and create a new device by clicking **"Add new Device"**.
+(**Important**: you should use **Chrome** or **Opera**. Firefox has been causing some problems with the WebRTC connection. )
 
 Configuration form:
   * **Name**: device name.
   * **Device ID**: unique device ID.
+  * **TURN server**: turn service.
   * **Resolution**: video resolution.
   * **FPS**: frames per second.
   * **Bitrate**: maximum bitrate at bps.
@@ -95,6 +97,8 @@ I have configured Ubiquo control room to listen the following keyboard keys:
 **q,w,e,r,t,a,s,d,f,g,ArrowRight,ArrowLeft,ArrowDown,ArrowUp**.
 
 Additionally, if connected, the control room reads a **PS4 controller** input.
+
+**IMPORTANT**: The communication between the browser and your RPI is based on WebRTC, meaning that a relay server can be necessary. [Subspace](https://subspace.com/) has kindly given me access to their global WebRTC TURN service that relays WebRTC connections with very low latency. Note, however, that this results in data transfer consumption. For this reason, I have put a limit of 20 min per call. 
 
 
 ## Hello World
