@@ -103,7 +103,7 @@ Additionally, if connected, the control room reads a **PS4 controller** input.
 
 ## Hello World
 
-You have a Hello World example in the [examples](https://github.com/Ubiqu0/Ubiquo/tree/main/examples) folder. Just open it and insert your device ID:
+You have a Hello World example in the [examples](https://github.com/Ubiqu0/Ubiquo/tree/main/examples) folder. Just open it and insert your device ID (note that you need to connect a camera do the csi connector.):
 
 ```
 WS_SERVER = 'wss://ubiquo.net/ws/control/'
