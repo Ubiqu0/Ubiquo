@@ -55,6 +55,8 @@ class GSTWebRTCApp:
             queue max-size-time=100000000 ! h264parse !
             rtph264pay mtu=1024 config-interval=-1 name=payloader !
             application/x-rtp,media=video,encoding-name=H264,payload=97 ! sendrecv.'''
+        else:
+            self.pipeline_str = pipeline_str
 
 
         if audio and not audio_str:
@@ -298,7 +300,6 @@ class GSTWebRTCApp:
 
         # Advance the state of the pipeline to PLAYING.
         res = self.pipeline.set_state(Gst.State.PLAYING)
-
         if res.value_name != 'GST_STATE_CHANGE_SUCCESS':
             raise GSTWebRTCAppError(
                 "Failed to transition pipeline to PLAYING: %s" % res)
