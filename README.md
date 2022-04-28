@@ -39,7 +39,7 @@ A camera is expected to be connected to the CSI connector, and the RPI OS config
 ## GStreamer
 
 
-**Ubiquo** is built on top of [GStreamer](https://gitlab.freedesktop.org/gstreamer) and [WebRTC](https://webrtc.org/), using GStreamer plugin [webrtcbin](https://gstreamer.freedesktop.org/documentation/webrtc/index.html). Raspbian Bullseye already have installed GStreamer 1.18.4, which means that if you want ot use this version, we don't need to compiple everything from source. 
+**Ubiquo** is built on top of [GStreamer](https://gitlab.freedesktop.org/gstreamer) and [WebRTC](https://webrtc.org/), using GStreamer plugin [webrtcbin](https://gstreamer.freedesktop.org/documentation/webrtc/index.html). Raspbian Bullseye already have installed GStreamer 1.18.4, which means that if you want ot use this version, we don't need to compile everything from source. 
 
 
 Start by cloning the repository:
