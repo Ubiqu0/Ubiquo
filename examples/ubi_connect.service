@@ -1,0 +1,12 @@
+[Unit]
+Description=Connect at boot
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/Ubiquo/examples
+ExecStart=/home/pi/Ubiquo/env/bin/python /home/pi/Ubiquo/examples/hello_world.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
