@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 VERSION=1.20.1
 ENVPATH=/home/pi/Ubiquo/env
 
@@ -18,7 +19,8 @@ sudo apt-get install build-essential cmake meson flex bison \
       libglib2.0-dev mesa-utils libgtk2.0-dev libx264-dev libx264-dev \
       python-gi-dev libgirepository1.0-dev libcairo2-dev python3-gst-1.0 autoconf \
       libopus-dev gtk-doc-tools libtool libsrtp2-dev openssl libssl-dev \
-      alsa-utils alsa-utils libalsa-ocaml  libasound2-dev python-dev libatlas-base-dev libjson-glib-dev -y
+      alsa-utils alsa-utils libalsa-ocaml  libasound2-dev libatlas-base-dev \
+      libjson-glib-dev libegl-dev libvpx-dev -y
 
 pip3 install meson pycairo PyGObject smbus2 websockets pyserial
 
@@ -36,6 +38,7 @@ cd gst-plugins-base-$VERSION
 mkdir build && cd build
 meson  --prefix=/usr       \
        --buildtype=release \
+       -Dgl=disabled \
        -Dpackage-origin=https://www.linuxfromscratch.org/blfs/view/svn/ \
        -Dpackage-name="GStreamer 1.20.1 BLFS"    \
        --wrap-mode=nodownload &&
@@ -63,7 +66,6 @@ cd gst-plugins-bad-$VERSION
 mkdir build && cd build
 meson  --prefix=/usr       \
        --buildtype=release \
-       -Dgpl=enabled       \
        -Dpackage-origin=https://www.linuxfromscratch.org/blfs/view/svn/ \
        -Dpackage-name="GStreamer 1.20.1 BLFS"
 ninja && sudo ninja install && sudo ldconfig
