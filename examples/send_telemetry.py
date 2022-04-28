@@ -4,7 +4,7 @@ from ubirtc.webrtc import WebRTC,GSTWebRTCApp
 import serial
 
 WS_SERVER = 'wss://ubiquo.net/ws/control/'
-DEVICEx_ID = '' #insert your device ID
+DEVICE_ID = '' #insert your device ID
 
 
 # define what to do with the received messages
