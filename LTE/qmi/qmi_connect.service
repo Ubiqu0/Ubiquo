@@ -3,12 +3,13 @@ Description=QMI Auto Connection
 After=network.target
 
 [Service]
-ExecStart=/bin/sh /home/pi/Ubiquo/qmi/qmi_reconnect.sh
-WorkingDirectory=/home/pi/Ubiquo/qmi
+User=root
+ExecStart=/bin/bash /home/pi/Ubiquo/LTE/qmi/qmi_connect.sh
+WorkingDirectory=/home/pi/Ubiquo/LTE/qmi
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
-User=pi
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
