@@ -24,7 +24,7 @@
 
 ## RPI OS
 
-I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) (**IMPORTANT**:don't install Bullseye but the latest stable legacy version of Raspberry Pi OS Buster) and update it:
+I have designed **Ubiquo** having in mind its use with a Raspbeery Pi 4. Install the latest [Bullseye Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) and update it (**IMPORTANT:** install the 32-bit version):
 
 1. Install RPI with [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 2. Update and upgrade: ``` sudo apt-get update && sudo apt-get upgrade ```
@@ -35,10 +35,14 @@ A camera is expected to be connected to the CSI connector, and the RPI OS config
 2. Select "**Interface Options**" > "**Camera**".
 3. Select "**Yes**" to enable the camera.
 
+
 ## GStreamer
 
 
-**Ubiquo** is built on top of [GStreamer](https://gitlab.freedesktop.org/gstreamer) and [WebRTC](https://webrtc.org/), using GStreamer plugin [webrtcbin](https://gstreamer.freedesktop.org/documentation/webrtc/index.html). Start by cloning the repository:
+**Ubiquo** is built on top of [GStreamer](https://gitlab.freedesktop.org/gstreamer) and [WebRTC](https://webrtc.org/), using GStreamer plugin [webrtcbin](https://gstreamer.freedesktop.org/documentation/webrtc/index.html). Raspbian Bullseye already have installed GStreamer 1.18.4, which means that if you want ot use this version, we don't need to compiple everything from source. 
+
+
+Start by cloning the repository:
 
 
 ```
@@ -46,22 +50,30 @@ git clone https://github.com/Ubiqu0/Ubiquo.git
 cd Ubiquo
 ```
 
-Create and activate a virtual environment (with python3.7):
+Create and activate a virtual environment:
 
 ```
 sudo apt-get install virtualenv
-virtualenv -p python3.7 env
+virtualenv env
 source env/bin/activate
 ```
+(**Note**: if you are working with Raspbian Buster, don't forget to select python3 for the new virtual enviroment: ```virtualenv -p python3.7 env```
 
-Run the instalattion script:
+To do a quick install and work with GStreamer 1.18.4 run the following commands: 
+
+```
+chmod +x install_gstreamer_bullseye_v1.18.4.sh
+./install_gstreamer_bullseye_v1.18.4.sh
+```
+
+To compile from the source the latest GStreamer version (1.20.1 at the time I'm writing this guide) run instead the following commands: 
 
 ```
 chmod +x install_gstreamer.sh
 ./install_gstreamer.sh
 ```
 
-The script will downloand and install GStreamer and several plugins. It will take some time. When finished you can test if GStreamer is installed (note that the first time GStreamer is exectued a bunch of errors will show up):
+This script will downloand and install GStreamer and several plugins. It will take some time. When finished you can test if GStreamer is installed (note that the first time GStreamer is exectued a bunch of warnings will show up):
 
 ```
 gst-inspect-1.0 --version
