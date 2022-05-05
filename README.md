@@ -38,6 +38,7 @@ A camera is expected to be connected to the CSI connector, and the RPI OS config
 
 ## GStreamer
 
+### v1.18.4
 
 **Ubiquo** is built on top of [GStreamer](https://gitlab.freedesktop.org/gstreamer) and [WebRTC](https://webrtc.org/), using GStreamer plugin [webrtcbin](https://gstreamer.freedesktop.org/documentation/webrtc/index.html). Raspbian Bullseye already have installed GStreamer 1.18.4, which means that if you want ot use this version, we don't need to compile everything from source. 
 
@@ -57,7 +58,9 @@ sudo apt-get install virtualenv
 virtualenv env
 source env/bin/activate
 ```
-(**Note**: if you are working with Raspbian Buster, don't forget to select python3 for the new virtual enviroment: ```virtualenv -p python3.7 env```
+**Note**: if you are working with Raspbian Buster, don't forget to select python3 for the new virtual enviroment: 
+
+```virtualenv -p python3.7 env```
 
 To do a quick install and work with GStreamer 1.18.4 run the following commands: 
 
@@ -65,6 +68,8 @@ To do a quick install and work with GStreamer 1.18.4 run the following commands:
 chmod +x install_gstreamer_bullseye_v1.18.4.sh
 ./install_gstreamer_bullseye_v1.18.4.sh
 ```
+
+### v1.20.1
 
 To compile from the source the latest GStreamer version (1.20.1 at the time I'm writing this guide) run instead the following commands: 
 
