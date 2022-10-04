@@ -1,5 +1,7 @@
 import asyncio
 import time,logging,json
+import sys
+sys.path.insert(0, '/home/pi/Ubiquo')
 from ubirtc.webrtc import WebRTC,GSTWebRTCApp
 import serial
 
@@ -31,10 +33,11 @@ class GstApp(GSTWebRTCApp):
         ###########################
 
 SEND_TIME_INTERVAL = 1
-async def send_data_message(wrtc_conn):
+async def send_data_message_(wrtc_conn):
     count = 0
     while True:
         await asyncio.sleep(SEND_TIME_INTERVAL)
+        # print("wrtc_conn",wrtc_conn.is_data_channel_ready())
         if wrtc_conn.is_data_channel_ready():
             ###########################
             ######## add your code here
@@ -48,18 +51,17 @@ async def send_data_message(wrtc_conn):
             count+=1
             ###########################
             ###########################
-
-
-            wrtc_conn.send_data_message('telemetry',data)
+            wrtc_conn.send_data_message('message',data)
 
 
 async def run():
+
     webrct_connection = WebRTC(
                             DEVICE_ID,
                             WS_SERVER,
-                            app = GstApp(audio = False)
+                            app = GstApp(audio = False, pipeline_str = pipeline_str)
                         )
-    asyncio.ensure_future(send_data_message(webrct_connection.app))
+    asyncio.ensure_future(send_data_message_(webrct_connection.app))
     await webrct_connection.connect()
     await webrct_connection.start()
 

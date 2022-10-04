@@ -24,6 +24,8 @@ setup(
   packages=['ubirtc'],
   author='Miguel Won',
   install_requires=[
+    "pycairo",
+    "PyGObject",
     "websockets",
     "asyncio",
     ],
